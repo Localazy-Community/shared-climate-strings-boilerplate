@@ -1,0 +1,13 @@
+{
+  "writeKey": "add-write-key",
+  "readKey": "add-read-key",
+  "download": {
+    "includeSourceLang": true,
+  },
+  "conversion": {
+    "actions": {
+      "type": "json",
+      "output": "locale/${lang}/${fileWithoutExt}.json"
+    }
+  }
+}
