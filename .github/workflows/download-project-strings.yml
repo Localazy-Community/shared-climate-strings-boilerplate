@@ -1,9 +1,7 @@
 on:
   schedule:
   # Run every Sunday at midnight
-  # - cron: '0 0 * * 0'
-  # Run every five minutes
-  - cron: '*/3 * * * *'
+  - cron: '0 0 * * 0'
 
 jobs:
   download-project-string:
