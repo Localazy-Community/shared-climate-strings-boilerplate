@@ -1,0 +1,20 @@
+on:
+  schedule:
+  # Run every Sunday at midnight
+  # - cron: '0 0 * * 0'
+  # Run every five minutes
+  - cron: '*/3 * * * *'
+
+jobs:
+  download-project-string:
+    name: Download translations from Localazy
+    runs-on: [self-hosted, linux]
+    steps:
+        - uses: actions/checkout@v2
+          with:
+            ref: ${{ github.head_ref }}
+        - uses: localazy/download@v1
+
+        - uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+           commit_message: Commit latest translations from Localazy.

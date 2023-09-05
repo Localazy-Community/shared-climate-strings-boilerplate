@@ -1,6 +1,4 @@
 {
-  "writeKey": "add-write-key",
-  "readKey": "add-read-key",
   "download": {
     "includeSourceLang": true
   },
